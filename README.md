@@ -1,27 +1,19 @@
-# PerformanceCalc
+# Performance result analysis
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+The goal of this Angular application is to analyze performance results from https://github.com/alinavoronko/kursa-darbs
 
-## Development server
+## Running the app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run start` to start the app. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## How to use it
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Follow the instructions & obtain the matrix multiplication results by running a performance measuring script. The results will be output to the terminal.
+The results will look similar to:
+```
+JS time results:
+[{"heapSize":2710824,"deltaHeapSize":32552,"timeWithRender":53.22594999987632,"measuredTime":0.2999999998137355},{"heapSize":2781624,"deltaHeapSize":60808,"timeWithRender":49.87194800004363,"measuredTime":0.40000000037252903}]
+WASM time results:
+[{"heapSize":2778636,"deltaHeapSize":34992,"timeWithRender":39.858904000371695,"measuredTime":0.20000000018626451,"startMemory":1179648,"memoryDiff":0},{"heapSize":2824776,"deltaHeapSize":36132,"timeWithRender":42.53840500023216,"measuredTime":0.30000000074505806,"startMemory":1179648,"memoryDiff":0}]
+```
+Paste the JS time results array into into the corresponding input field. Do the same for WASM time results array. Press submit button in order to obtain the results.
